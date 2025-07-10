@@ -1,0 +1,252 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #00000050;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #070707e5;
+    padding: 20px 40px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 1);
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    font-size: 16px;
+}
+
+.nav-links a {
+    color: #DEDEDE;
+    text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links img:hover {
+    cursor: pointer;
+    color: #bbbbbb;
+}
+
+.nav-links a:active {
+    color: #ffffff;
+}
+
+/* Hero section styles */
+.hero {
+    height: 90vh;
+}
+.hero-content {
+    background-image: url("../task2 (menu)/materials/images/background.png");
+    background-size: cover;
+    background-position: center;
+    height: 70%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+}
+.hero-left-text{
+    align-self: flex-start;
+    margin-top: 50px;
+}
+.hero-left-text,.hero-right-text{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hero-left-text h2{
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0px;
+}
+.hero-left-text h2 span{
+    opacity: 0.5;
+}
+.hero-left-text h1{
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.hero-left-text p{
+    font-size: 16px;
+    font-weight: 100;
+    width: 274px;
+    margin: 0px;
+}
+
+.hero-right-text {
+    margin-right: 50px;
+}
+
+.hero-right-text h1{
+    position: relative;
+    width: 233px;
+    font-size: 64px;
+    font-weight: 700;
+    margin: 0px;
+}
+
+.hero-right-text h1::before{
+    content: "Fruit Mania";
+    font-size: 16px;
+    font-family: "Sacramento";
+    font-weight: 400;
+    color: #DEC700;
+    position: absolute;
+    top: 50px;
+    right: 0;
+}
+.hero-right-text p{
+    width: 351px;
+    font-size: 16px;
+    font-weight: 100;
+    margin: 0px;
+}
+
+.hero-image {
+    position: absolute;
+    top: 45%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    width: 513px;
+    height: 703px;    
+    scale: 0.9;
+}
+.hero-footer {
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-footer-card {
+    width: 50%;
+    height: 100%;
+    background-color: #171719CC;
+    z-index: 1;
+    display: flex;
+
+}
+.hero-footer-card-image {
+    height:100%;
+    width: 30%;
+}
+.hero-footer-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-footer-card-content{
+    width: 70%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.hero-footer-card-content h2 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px;
+    color: #ffffff;
+}
+
+.hero-footer-card-content p {
+    font-size: 12px;
+    font-weight: 100;
+    margin: 0px;
+    color: #ffffff;
+}
+.hero-footer-card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.hero-footer-card-text p{
+    width: 60%;
+}
+.hero-footer-card-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-footer-card-price button {
+    background-color: #DEC700;
+    color: #000000;
+    border: none;
+    width: 96px;
+    height: 37px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #ffffff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.hero-footer-card-price button:hover {
+    background-color: #c9b501;
+}
+.hero-footer-card-price button:active {
+    background-color: #a39300;
+}
+
+.hero-footer-card-price h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0px;
+    color: #ffffff;
+}
+.hero-footer-card-price h3 span{
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: line-through;
+    margin: 0px;
+    color: #ffffff;
+}
+.hero .social-media {
+    position: absolute;
+    top: 15%;
+    right: calc(-100px / 2);
+    background-color: #DEC700;
+    height: 210px;
+    width: 100px;
+    border-radius: 40px 0px 0px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.hero .social-media ul {
+    position: relative;
+    left: -20px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 30px;
+
+}
+.hero .social-media ul li a {
+    color: #ffffff;
+    font-size: 20px;
+}
