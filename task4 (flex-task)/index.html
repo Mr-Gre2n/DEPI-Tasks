@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 600px;
+        height: 400px;
+        padding: 20px;
+        background-color: #ebebeb;
+        flex-direction: row;
+    }
+    .child {
+        flex-grow: 1;
+        margin: 0px 5px;
+        width: calc(100% / 3 - 10px); /* 3 items per row with margin */
+        background-color: #5a7a88;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    .one {
+        height: 10%;
+        align-self: flex-end;
+    }
+    .three {
+        height: 10%;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="child six">6</div>
+        <div class="child three">3</div>
+        <div class="child four">4</div>
+        <div class="child five">5</div>
+        <div class="child two">2</div>
+        <div class="child one">1</div>
+    </div>
+</body>
+</html>
