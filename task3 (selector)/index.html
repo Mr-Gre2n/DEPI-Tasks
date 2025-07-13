@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Selector Challenge</title>
+</head>
+<style>
+    .post p{
+        font-style: italic;
+    }
+    article[data-type="blog"] {
+        background-color: #f0f0f0;
+    }
+    #highlighted-post{
+        border: 2px solid red;
+    }
+    .nav :last-child a{
+        color: red;
+    }
+    .post h2::before{
+        content: "→ ";
+    }
+    #subscribe:checked  + label {
+        background-color: lightgreen;
+    }
+</style>
+<body>
+  <div class="container">
+    <h1>Main Title</h1>
+    
+    <section class="featured">
+      <article class="post" data-type="news">
+        <h2>News Post</h2>
+        <p>This is a news article.</p>
+      </article>
+
+      <article class="post" data-type="blog">
+        <h2>Blog Post</h2>
+        <p>This is a blog article.</p>
+      </article>
+
+      <article class="post" data-type="news" id="highlighted-post">
+        <h2>Highlighted News</h2>
+        <p>This one is special.</p>
+      </article>
+    </section>
+
+    <ul class="nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <form>
+      <input type="text" placeholder="Enter your name">
+      <input type="checkbox" id="subscribe">
+      <label for="subscribe">Subscribe</label>
+    </form>
+  </div>
+</body>
+</html>
