@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            width: 150px;
+            height: 150px;
+            background-color: #3498db;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            opacity: 0.8;
+            margin: 10px ;
+            animation: animation123 4s ease infinite;
+        }
+        @keyframes animation123 {
+            0% {
+                transform: translateX(0);
+                background-color: #3498db;
+            }
+            25% {
+                transform: translateX(200px);
+                background-color: #9b59b6;
+            }
+            50% {
+                transform: translateY(200px) translateX(200px);
+                background-color: #2ecc71;
+            }
+            75% {
+                transform: translateY(200px);
+                background-color: #e74c3c;
+            }
+            100% {
+                transform: translateX(0);
+                background-color: #3498db;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card"></div>
+</body>
+</html>
