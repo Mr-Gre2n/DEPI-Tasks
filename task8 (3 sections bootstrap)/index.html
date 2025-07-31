@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Stylish Portfolio</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+            crossorigin="anonymous" />
+
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
+            rel="stylesheet" />
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .hero {
+            background-image: url(images/bg-masthead.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .fw-2xl {
+            font-size: 4rem;
+        }
+        .fw-xl {
+            font-size: 3rem;
+        }
+        section {
+            padding: 100px 0;
+            background-color: #227e9f;
+        }
+        .service-icon {
+            font-size: 2.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 110px;
+            height: 110px;
+            color: #227e9f;
+            background-color: #ffffff;
+        }
+        .download-section {
+            background-image: url(images/bg-callout.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 95vh;
+        }
+
+        .portfolio-item {
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+        .portfolio-item .caption {
+            display: flex;
+            position: absolute;
+            inset: 0;
+            background-color: rgba(33, 37, 41, 0.2);
+            z-index: 1;
+            transition: clip-path 0.25s ease-out, background-color 0.7s;
+            clip-path: inset(0);
+            text-align: left;
+        }
+        .portfolio-item .caption-content {
+            color: #fff;
+            margin: auto 2rem 2rem;
+            transition: opacity 0.25s;
+        }
+        .portfolio-item .caption-content .h2 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+        .portfolio-item .caption-content p {
+            font-weight: 300;
+            font-size: 1rem;
+        }
+        .portfolio-item img {
+            transition: clip-path 0.25s ease-out;
+            clip-path: inset(-1px);
+            width: 100%;
+            height: auto;
+        }
+        .portfolio-item:hover img {
+            clip-path: inset(2rem);
+        }
+        .portfolio-item:hover .caption {
+            background-color: rgba(29, 128, 159, 0.9);
+            clip-path: inset(2rem);
+        }
+        .portfolio {
+            padding: 100px 120px;
+        }
+        @media screen and (max-width: 990px) {
+            .portfolio {
+                padding: 50px 20px;
+            }
+            .portfolio-item .caption-content {
+                margin: auto 1rem 1rem;
+                text-align: center;
+            }
+            .portfolio-item:hover img,
+            .portfolio-item:hover .caption {
+                clip-path: inset(1rem);
+            }
+            .download-section {
+                height: 70vh;
+            }
+            .fw-2xl {
+                font-size: 2.5rem;
+            }
+            .fw-xl {
+                font-size: 2rem;
+            }
+        }
+        @media screen and (max-width: 576px) {
+            .portfolio {
+                padding: 30px 10px;
+            }
+            .portfolio-item {
+                margin-bottom: 1rem;
+            }
+            .portfolio-item .caption-content {
+                margin: auto 0.5rem 0.5rem;
+            }
+            .portfolio-item .caption-content .h2 {
+                font-size: 0.7rem;
+            }
+            .portfolio-item .caption-content p {
+                font-size: 0.9rem;
+            }
+            .portfolio-item:hover img,
+            .portfolio-item:hover .caption {
+                clip-path: inset(0.5rem);
+            }
+            .fw-2xl {
+                font-size: 2rem;
+            }
+            .fw-xl {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+
+    <body>
+        <section class="hero min-vh-100 d-flex align-items-center">
+            <div class="container px-4 px-lg-5 text-center">
+                <h1 class="mb-1 fw-bold fw-2xl">Stylish Portfolio</h1>
+                <h3 class="mb-5 fw-medium">
+                    <em>A Free Bootstrap Theme by Start Bootstrap</em>
+                </h3>
+                <a class="btn btn-primary py-4 px-4 fw-medium" href="#about"
+                    >Find Out More</a
+                >
+            </div>
+        </section>
+
+        <section id="about" class="bg-white">
+            <div class="container px-4 px-lg-5 text-center">
+                <h2 class="mb-3 fw-bold">
+                    Stylish Portfolio is the perfect theme for your next
+                    project!
+                </h2>
+                <p class="fs-6 text-center">
+                    This theme features a flexible, UX friendly sidebar menu and
+                    stock photos from our friends at Unsplash !
+                </p>
+                <a
+                    class="btn btn-dark mt-4 py-3 px-4 fw-medium"
+                    href="#services"
+                    >What we offer</a
+                >
+            </div>
+        </section>
+
+        <section class="content-section text-white text-center" id="services">
+            <div class="container px-4 px-lg-5">
+                <div class="content-section-heading">
+                    <h3 class="text-warning mb-0 fs-5">Services</h3>
+                    <h2 class="mb-5 fw-xl fw-bold">What We Offer</h2>
+                </div>
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                        <span class="service-icon rounded-circle mx-auto mb-3"
+                            ><i class="icon-screen-smartphone"></i
+                        ></span>
+                        <h4><strong>Responsive</strong></h4>
+                        <p class="text-faded mb-0">
+                            Looks great on any screen size!
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                        <span class="service-icon rounded-circle mx-auto mb-3"
+                            ><i class="icon-pencil"></i
+                        ></span>
+                        <h4><strong>Redesigned</strong></h4>
+                        <p class="text-faded mb-0">
+                            Freshly redesigned for Bootstrap 5.
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+                        <span class="service-icon rounded-circle mx-auto mb-3"
+                            ><i class="icon-like"></i
+                        ></span>
+                        <h4><strong>Favorited</strong></h4>
+                        <p class="text-faded mb-0">
+                            Millions of users Start Bootstrap!
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <span class="service-icon rounded-circle mx-auto mb-3"
+                            ><i class="icon-mustache"></i
+                        ></span>
+                        <h4><strong>Question</strong></h4>
+                        <p class="text-faded mb-0">
+                            I mustache you a question...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="download-section d-flex align-items-center">
+            <div class="container px-4 px-lg-5 text-center">
+                <h1 class="mb-5 fw-bold fw-xl">
+                    Welcome to your <br />
+                    next website!
+                </h1>
+
+                <a class="btn btn-primary py-3 px-4 fw-medium" href="#about"
+                    >Download Now!</a
+                >
+            </div>
+        </section>
+        <!-- Portfolio -->
+        <section class="portfolio bg-white text-center">
+            <div class="content-section-heading">
+                <h3 class="text-warning mb-0 fs-5">Portfolio</h3>
+                <h2 class="mb-5 fw-xl fw-bold">Recent Projects</h2>
+            </div>
+            <div class="row justify-content-center gx-0">
+                <div class="col-lg-6">
+                    <a class="portfolio-item" href="#!">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <div class="h2">Stationary</div>
+                                <p class="mb-0">
+                                    A yellow pencil with envelopes on a clean,
+                                    blue backdrop!
+                                </p>
+                            </div>
+                        </div>
+                        <img
+                            class="img-fluid"
+                            src="images/portfolio-1.jpg"
+                            alt="..." />
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <a class="portfolio-item" href="#!">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <div class="h2">Ice Cream</div>
+                                <p class="mb-0">
+                                    A dark blue background with a colored
+                                    pencil, a clip, and a tiny ice cream cone!
+                                </p>
+                            </div>
+                        </div>
+                        <img
+                            class="img-fluid"
+                            src="images/portfolio-2.jpg"
+                            alt="..." />
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <a class="portfolio-item" href="#!">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <div class="h2">Strawberries</div>
+                                <p class="mb-0">
+                                    Strawberries are such a tasty snack,
+                                    especially with a little sugar on top!
+                                </p>
+                            </div>
+                        </div>
+                        <img
+                            class="img-fluid"
+                            src="images/portfolio-3.jpg"
+                            alt="..." />
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <a class="portfolio-item" href="#!">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <div class="h2">Workspace</div>
+                                <p class="mb-0">
+                                    A yellow workspace with some scissors,
+                                    pencils, and other objects.
+                                </p>
+                            </div>
+                        </div>
+                        <img
+                            class="img-fluid"
+                            src="images/portfolio-4.jpg"
+                            alt="..." />
+                    </a>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
